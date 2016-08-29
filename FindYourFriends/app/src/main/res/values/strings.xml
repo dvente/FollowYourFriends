@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Find Your Friends</string>
+
+    <!-- Strings related to login -->
+    <string name="title_activity_login_activity_test">Sign in</string>
+    <string name="request_sent_successful">Your friend request was successfully sent.</string>
+    <string name="request_number_unknown">Unknown number, request not sent</string>
+    <string name="server_error">Something went wrong. We couldn\'t process your request.</string>
+    <string name="already_registered">You already registered with us. Please sign in.</string>
+</resources>

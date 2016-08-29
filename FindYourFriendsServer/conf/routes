@@ -1,0 +1,38 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+#regester a new user
+POST 	/new/:phone					controllers.HomeController.newUser(phone: String)
+
+#login for existing user
+POST 	/login/:phone				controllers.HomeController.attemptLogin(phone: String)
+
+#send friend request to different user
+POST 	/request/:phone/:userID		controllers.HomeController.sendFriendRequest(phone: String, userID: Integer)
+
+#get all friend requests
+GET 	/request/:userID			controllers.HomeController.getAllFriendRequests(userID: Integer)
+
+#get all friend 
+GET 	/friend/:userID				controllers.HomeController.getAllFriends(userID: Integer)
+
+#Accept a request
+POST /accept/:userID/:friendsPhone	controllers.HomeController.acceptRequest(userID: Integer, friendsPhone: String)
+
+#Reject a request
+POST /reject/:userID/:friendsPhone	controllers.HomeController.rejectRequest(userID: Integer, friendsPhone: String)
+
+#Delete a friend
+POST /delete/:userID/:friendsPhone	controllers.HomeController.deleteFriend(userID: Integer, friendsPhone: String)
+
+#Update user location
+POST /update/:userID/:location		controllers.HomeController.updateLocation(userID: Integer, location:String)
+
+# An example controller showing how to use dependency injection
+GET     /count                      controllers.CountController.count
+
+# An example controller showing how to write asynchronous code
+GET     /message                    controllers.AsyncController.message
+
+# Map static resources from the /public folder to the /assets URL path
+GET     /assets/*file               controllers.Assets.versioned(path="/public", file: Asset)
