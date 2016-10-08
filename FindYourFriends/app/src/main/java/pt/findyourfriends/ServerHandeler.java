@@ -18,8 +18,8 @@ class ServerHandler {
     public static String getRequest(String parameters) {
         try {
             //standard GET request to the server
-            String baseUrl = "http://pt2016.liacs.nl/team18/";
-            //String baseUrl = "http://10.0.2.2:9000/";
+//            String baseUrl = "http://pt2016.liacs.nl/team18/";
+            String baseUrl = "http://10.0.2.2:9000/";
             URL url = new URL(baseUrl + parameters);
             HttpURLConnection connection = (HttpURLConnection) url.openConnection();
             connection.setRequestMethod("GET");
@@ -55,8 +55,8 @@ class ServerHandler {
 
             //standard POST request
             Integer id = -1;
-            String baseUrl = "http://pt2016.liacs.nl/team18/";
-            //String baseUrl = "http://10.0.2.2:9000/";
+//            String baseUrl = "http://pt2016.liacs.nl/team18/";
+            String baseUrl = "http://10.0.2.2:9000/";
             URL url = new URL(baseUrl + parameters);
             HttpURLConnection connection = (HttpURLConnection) url.openConnection();
             connection.setRequestMethod("POST");
@@ -67,6 +67,7 @@ class ServerHandler {
 
             //attemptLogin and newUser will return the userID which we'll have to set
             //the rest return nothing, in which case we don't need to do anything
+            Log.d("CODE",Integer.toString(connection.getResponseCode())+" " + connection.getResponseMessage());
             BufferedReader input = new BufferedReader(new InputStreamReader(connection.getInputStream()));
             try {
                 JSONArray responseArray;

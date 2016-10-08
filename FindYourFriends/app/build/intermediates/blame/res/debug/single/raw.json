@@ -1,6 +1,6 @@
 [
     {
-        "merged": "/home/daniel/Downloads/FindYourFriends/app/build/intermediates/res/merged/debug/raw/gtm_analytics",
-        "source": "/home/daniel/Downloads/FindYourFriends/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-analytics/8.4.0/res/raw/gtm_analytics"
+        "merged": "/home/daniel/git/followYourFriends/FindYourFriends/app/build/intermediates/res/merged/debug/raw/gtm_analytics",
+        "source": "/home/daniel/git/followYourFriends/FindYourFriends/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-analytics/8.4.0/res/raw/gtm_analytics"
     }
 ]
